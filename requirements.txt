@@ -1,0 +1,6 @@
+ih
+flask
+gunicorn
+requests
+bs4
+pillow
