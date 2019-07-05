@@ -4,3 +4,4 @@ gunicorn
 requests
 bs4
 pillow
+google-cloud-profiler

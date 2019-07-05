@@ -6,6 +6,14 @@ from flask import Flask, request
 
 from ih.chart import chart as ih_chart
 
+import googlecloudprofiler
+
+try:
+    googlecloudprofiler.start(verbose=3)
+except (ValueError, NotImplementedError) as exc:
+    print(exc)
+
+
 UPLOAD_FOLDER = "tmp"
 ALLOWED_EXTENSIONS = set(['png','jpg','jpeg','gif'])
 

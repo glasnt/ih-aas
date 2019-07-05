@@ -1,13 +1,12 @@
-FROM python:3.7-alpine
+FROM python:3.7-slim-stretch
 
 ENV APP_HOME /app
 ENV PORT 8080
 WORKDIR $APP_HOME
 
-
-# For Pillow
-RUN apk add --update build-base jpeg-dev zlib-dev 
-RUN apk add --update git
+# for google-cloud-profiler
+RUN apt-get update
+RUN apt-get install -y build-essential
 
 COPY . . 
 
