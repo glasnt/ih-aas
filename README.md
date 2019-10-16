@@ -1,7 +1,8 @@
 # [`ih`](https://github.com/glasnt/ih), as a service. 
 
-[![Run on Google Cloud](https://storage.googleapis.com/cloudrun/button.svg)](https://console.cloud.google.com/cloudshell/editor?shellonly=true&cloudshell_image=gcr.io/cloudrun/button&cloudshell_git_repo=https://github.com/glasnt/ih-aas)
+This code deploys [`ih`](https://github.com/glasnt/ih), as a Cloud Run service. 
 
+[![Run on Google Cloud](https://storage.googleapis.com/cloudrun/button.svg)](https://deploy.cloud.run)
 
 ## Local Usage
 
