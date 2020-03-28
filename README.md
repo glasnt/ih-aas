@@ -2,6 +2,8 @@
 
 This code deploys [`ih`](https://github.com/glasnt/ih), as a Cloud Run service. 
 
+## Want to deploy your own? 
+
 [![Run on Google Cloud](https://storage.googleapis.com/cloudrun/button.svg)](https://deploy.cloud.run)
 
 ## Local Usage
