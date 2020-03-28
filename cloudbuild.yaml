@@ -4,6 +4,9 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/ih-aas']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'ih-aas', '--image', 'gcr.io/$PROJECT_ID/ih-aas', '--region', 'us-central1']
+  args: ['run', 'deploy', 'ih-aas', 
+         '--image', 'gcr.io/$PROJECT_ID/ih-aas', 
+         '--platform', 'managed', 
+         '--region', 'us-central1']
 images:
 - gcr.io/$PROJECT_ID/ih-aas
