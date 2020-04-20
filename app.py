@@ -22,7 +22,11 @@ def proforma():
     <div class="container">
     <div class="row"><div class="twelve columns">
         <h2><code>ih</code>, as a service™️</h2>
-        <p>Specify a <code>?url</code> of an image, with optional <code>scale, colors, palette</code> parameters, and optional <code>render, guidelines</code> flags. <a href="?url=https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/180/parrot_1f99c.png&scale=3&colors=16">Example</a>
+        <p>Specify a <code>?url</code> of an image, with optional <code>scale,
+        colors, palette</code> parameters, and optional <code>render,
+        guidelines</code> flags. <a
+        href="?url=https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/180/parrot_1f99c.png&scale=3&colors=16">Example</a><p>
+        <p>Coming soon: file uploads</p>
     </div></div>
     </div>
     """
