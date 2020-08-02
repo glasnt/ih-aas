@@ -2,7 +2,7 @@ import os
 import shutil
 import requests
 
-from flask import Flask, request
+from flask import Flask, request, Response
 
 from ih.chart import chart as ih_chart
 
@@ -63,10 +63,18 @@ def api():
     palette = request.args.get('palette', "wool")
     render = request.args.get('render', False, type=bool)
     guidelines = request.args.get('guidelines', False, type=bool)
-    
-    chart = ih_chart(image_name=input_file, scale=scale, colours=colors, save=False, guidelines=True, palette_name=palette, render=render) 
 
-    return proforma() + chart
+    if "text/html" in request.headers.get("Accept", ""):
+        fileformat = "html"
+    else:
+        fileformat = "term"
+    
+    chart = ih_chart(image_name=input_file, scale=scale, colors=colors, save=False, guidelines=True, palette_name=palette, render=render, fileformat=fileformat) 
+
+    if fileformat == "html": 
+        return proforma() + chart
+    else:
+        return Response(chart, mimetype="text/plain; charset=utf-8")
 
 
 @app.after_request
@@ -77,4 +85,4 @@ def cleanup(response):
     return response
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)), debug=True)
