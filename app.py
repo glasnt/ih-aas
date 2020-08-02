@@ -69,7 +69,7 @@ def api():
     else:
         fileformat = "term"
     
-    chart = ih_chart(image_name=input_file, scale=scale, colors=colors, save=False, guidelines=True, palette_name=palette, render=render, fileformat=fileformat) 
+    chart = ih_chart(image_name=input_file, scale=scale, colors=colors, save=False, guidelines=guidelines, palette_name=palette, render=render, fileformat=fileformat) 
 
     if fileformat == "html": 
         return proforma() + chart
