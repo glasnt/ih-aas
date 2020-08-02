@@ -1,4 +1,4 @@
-ih==0.0.1.dev2
+ih==0.0.1.dev3
 flask
 gunicorn
 requests
