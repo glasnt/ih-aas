@@ -15,7 +15,7 @@ cd ih-aas
 Then either:
 
 ```
-FLASK_DEBUG=1 python app.py
+python app.py
 ```
 
 or
@@ -24,3 +24,9 @@ or
 docker build --no-cache -t ih-aas . && docker run --rm -p 8080:8080 ih-aas
 ```
 
+
+## curl 
+
+```
+curl -F 'image=@/path/to/image.png' http://localhost:8080 -F 'palette=lego' -F 'render=True'
+```
