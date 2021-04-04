@@ -79,7 +79,7 @@ def home():
         return "File upload type not allowed."
 
     ext = upload.filename.split(".")[-1]
-    rand_fn = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
+    rand_fn = "".join(random.choice(string.ascii_lowercase) for i in range(10))
     input_file = os.path.join(input_dir, f"{rand_fn}.{ext}")
 
     if upload.filename != "":
